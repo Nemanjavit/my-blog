@@ -1,0 +1,39 @@
+[debug] [2022-02-01T20:52:07.617Z] ----------------------------------------------------------------------
+[debug] [2022-02-01T20:52:07.620Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PC-Diseño\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only auth
+[debug] [2022-02-01T20:52:07.620Z] CLI Version:   10.1.3
+[debug] [2022-02-01T20:52:07.620Z] Platform:      win32
+[debug] [2022-02-01T20:52:07.620Z] Node Version:  v16.13.0
+[debug] [2022-02-01T20:52:07.622Z] Time:          Tue Feb 01 2022 14:52:07 GMT-0600 (Central Standard Time)
+[debug] [2022-02-01T20:52:07.622Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-01T20:52:07.709Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-01T20:52:07.709Z] > authorizing via signed-in user (vitnemanja3@gmail.com)
+[info] i  emulators: Starting emulators: auth {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth"}}
+[debug] [2022-02-01T20:52:07.747Z] [hub] writing locator at C:\Users\PC-DIS~1\AppData\Local\Temp\hub-numbers-colors.json
+[info] i  ui: downloading ui-v1.6.4.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.6.4.zip..."}}
+[debug] [2022-02-01T20:52:16.266Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.6.4.zip 
+[debug] [2022-02-01T20:52:16.447Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.6.4.zip 200
+[debug] [2022-02-01T20:52:16.447Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.6.4.zip [stream]
+[debug] [2022-02-01T20:52:19.437Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-02-01T20:52:19.438Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-02-01T20:52:19.438Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\PC-Diseño\\.cache\\firebase\\emulators\\ui-v1.6.4\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\PC-Diseño\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.4\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-02-01T20:52:19.588Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI        │
+├────────────────┼────────────────┼────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth │
+└────────────────┴────────────────┴────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-02-02T04:26:48.949Z] Received signal SIGHUP 1
