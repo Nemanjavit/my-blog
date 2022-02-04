@@ -1,0 +1,30 @@
+@mixin transition($x...) {
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+
+@mixin heading-xlg {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  @include font-size(3rem);
+}
+@mixin text-lg {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  @include font-size(2rem);
+}
+
+@mixin text-md {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  @include font-size(1.1rem);
+}
+
+@mixin text-sm {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  @include font-size(0.8rem);
+}

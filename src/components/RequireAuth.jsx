@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 function RequireAuth() {
   const { currentUser } = useContext(AuthContext);
   const location = useLocation();
-  console.log("require auth", currentUser);
+
   if (!currentUser) {
     return <Navigate to="/" state={{ from: location }} />;
   }

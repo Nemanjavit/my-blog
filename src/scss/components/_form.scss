@@ -1,0 +1,160 @@
+// rgba(72,190,255)
+.form {
+  height: 80vh;
+  padding: 30px 20px;
+  min-width: 50%;
+  background-color: $capri;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  input:-webkit-autofill {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  &--signIn {
+    border-radius: 0 15px 15px 0;
+  }
+
+  &--signUp {
+    border-radius: 15px 0 0 15px;
+  }
+
+  form {
+    width: 100%;
+  }
+  .form__heading {
+    color: $indigoDye;
+    padding: 15px 0;
+    @include heading-xlg;
+  }
+  .formIcon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: $indigoDye;
+
+    &__lock {
+      @include transition(opacity 0.3s ease);
+      opacity: 1;
+      &--hide {
+        opacity: 0;
+      }
+    }
+    &__unlock {
+      @include transition(opacity 0.2s ease);
+      position: absolute;
+      color: green;
+      opacity: 0;
+
+      &--show {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__error {
+    padding: 15px 0;
+    visibility: hidden;
+    color: $redPigment;
+
+    &--show {
+      visibility: visible;
+    }
+  }
+
+  .input-row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 30px 0;
+  }
+
+  .input {
+    border: none;
+    padding-top: 25px;
+    outline: none;
+    background: transparent;
+    @include text-md;
+    font-weight: 400;
+  }
+
+  .label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid lightblue;
+    color: $prussianBlue;
+    @include text-md;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-bottom: 3px solid $indigoDye;
+      left: 0px;
+      bottom: -2px;
+      transform: scaleX(0.1);
+      transform-origin: left;
+      @include transition(transform 0.3s ease);
+    }
+
+    &__name {
+      position: absolute;
+      bottom: 5px;
+      @include transition(transform 0.2s ease);
+    }
+  }
+  .input-row input:focus + .label .label__name,
+  .input-row input:valid + .label .label__name {
+    transform: translateY(-120%);
+  }
+
+  .input-row input:focus + .label::after,
+  .input-row input:valid + .label::after,
+  .input-row input:hover + .label::after {
+    transform: scaleX(1);
+  }
+
+  &__button {
+    margin: 50px auto;
+    display: block;
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: none;
+    color: $capri;
+    cursor: pointer;
+    @include text-md;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--signUp {
+      background-color: $indigoDye;
+    }
+
+    &--signIn {
+      background-color: $lavanderBlush;
+      color: $indigoDye;
+    }
+  }
+
+  &__showToggler {
+    cursor: pointer;
+    color: $prussianBlue;
+    @include text-sm;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

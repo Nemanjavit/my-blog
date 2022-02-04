@@ -1,4 +1,23 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-body {
-  background-color: red;
-}
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/transitions";
+
+@import "../../node_modules/rfs/scss.scss";
+
+@import "./abstracts/colors";
+@import "./abstracts/fonts";
+@import "./abstracts/mixins";
+@import "./reset/reset";
+
+// components
+@import "./components/mainNav";
+@import "./components/form";
+@import "./components/signIn";
+
+// pages
+@import "./pages/authPage";
