@@ -26,10 +26,10 @@ function MainNav() {
           <Nav className="me-auto mainNav__menu">
             {currentUser ? (
               <>
-                <NavLink className="link" to="/">
+                <NavLink className="link" to="/myposts">
                   My Posts
                 </NavLink>
-                <NavLink className="link" to="/auth">
+                <NavLink className="link" to="/dashboard">
                   Dashboard
                 </NavLink>
               </>

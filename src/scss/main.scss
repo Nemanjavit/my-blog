@@ -6,7 +6,10 @@
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/nav";
 @import "../../node_modules/bootstrap/scss/transitions";
-
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/close";
 @import "../../node_modules/rfs/scss.scss";
 
 @import "./abstracts/colors";
@@ -18,6 +21,10 @@
 @import "./components/mainNav";
 @import "./components/form";
 @import "./components/signIn";
+@import "./components/modal";
+@import "./components/post";
 
 // pages
 @import "./pages/authPage";
+@import "./pages/myPosts";
+@import "./pages/dashboard";

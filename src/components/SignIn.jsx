@@ -10,11 +10,12 @@ function SignInPage({ toggler }) {
   const [user, setUser] = useState({ email: "", password: "" });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [errorMessage, setErrorMessage] = useError();
+  const [displayName, setDisplayName] = useState("");
 
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
-  console.log("navigate", navigate);
+
   const signIn = async (e) => {
     e.preventDefault();
     try {
@@ -23,10 +24,10 @@ function SignInPage({ toggler }) {
         user.email,
         user.password
       );
+      auth.currentUser.displayName = displayName;
       setUser({ email: "", password: "" });
       setIsLoggedIn(true);
       setTimeout(() => {
-        // navigate(from, { replace: true });
         navigate("/dashboard");
       }, 500);
     } catch (error) {
@@ -71,6 +72,15 @@ function SignInPage({ toggler }) {
           name="password"
           style="input"
           changeHandler={(e) => setUser({ ...user, password: e.target.value })}
+        />
+        <Input
+          label="Display name"
+          type="text"
+          value={displayName}
+          id="displayName"
+          name="displayName"
+          style="input"
+          changeHandler={(e) => setDisplayName(e.target.value)}
         />
         <span className="form__showToggler" onClick={toggler}>
           You don't have an account? Sign up

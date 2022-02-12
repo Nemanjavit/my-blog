@@ -1,6 +1,15 @@
 import React from "react";
 
-function Input({ type, id, changeHandler, label, name, value, style }) {
+function Input({
+  type,
+  id,
+  changeHandler,
+  label,
+  name,
+  value,
+  style,
+  placeholder,
+}) {
   return (
     <div className="input-row">
       <input
@@ -12,6 +21,7 @@ function Input({ type, id, changeHandler, label, name, value, style }) {
         required
         onChange={changeHandler}
         autoComplete="one-time-code"
+        placeholder={placeholder}
       />
       <label className="label" htmlFor={id}>
         <span className="label__name">{label}</span>

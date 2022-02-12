@@ -1,0 +1,23 @@
+.addPost__button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background-color: $indigoDye;
+  color: $capri;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  @include text-md;
+  font-weight: 400;
+
+  &:hover {
+    background-color: $capri;
+    color: $indigoDye;
+  }
+}
+.addPost__icon {
+  font-size: 30px;
+  margin-left: 10px;
+}

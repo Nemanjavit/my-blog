@@ -1,0 +1,131 @@
+.post {
+  background-color: whitesmoke;
+  width: 60%;
+  display: block;
+  margin: 5px auto;
+  padding: 15px;
+  color: $indigoDye;
+  border-radius: 10px;
+
+  &__header {
+    border-bottom: 1px solid;
+    border-color: rgba($color: $indigoDye, $alpha: 0.3);
+  }
+
+  &__title {
+    @include text-md;
+    padding: 5px 0;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &__body {
+    padding: 10px 0;
+  }
+
+  &__footer {
+    border-top: 1px solid;
+    border-color: rgba($color: $indigoDye, $alpha: 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    @include text-sm;
+  }
+
+  &__comments {
+    display: flex;
+    align-items: center;
+  }
+
+  &__addComment {
+    margin-left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__numOfComments {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+// comments section
+
+.comments {
+  &__input {
+    @include text-sm;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid rgba($color: $indigoDye, $alpha: 0.3);
+
+    &:focus {
+      outline: none;
+      border: 1px solid rgba($color: $indigoDye, $alpha: 1);
+    }
+  }
+
+  &__button {
+    background-color: $indigoDye;
+    color: $capri;
+    padding: 5px 20px;
+    display: block;
+    margin: 10px 0 10px auto;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $capri;
+      color: $indigoDye;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding-left: 10px;
+    position: absolute;
+    opacity: 0;
+
+    &--show {
+      transition: opacity 0.5s ease;
+      position: static;
+      opacity: 1;
+    }
+  }
+}
+
+.comment {
+  padding: 10px;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 1px solid rgba($color: $indigoDye, $alpha: 0.2);
+  border-radius: 10px;
+
+  &__author {
+    @include text-sm;
+    font-weight: 700;
+  }
+
+  &__text {
+    @include text-sm;
+  }
+
+  &__delete {
+    @include text-sm;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 5px 0;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
